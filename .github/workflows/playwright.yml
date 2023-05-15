@@ -1,9 +1,5 @@
 name: Playwright Tests
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -34,7 +30,7 @@ jobs:
       - if: steps.playwright-cache.outputs.cache-hit != 'true'
         name: Install Playwright Browsers
         run: npx playwright install --with-deps
-      
+
       - name: Collect Workflow Telemetry
         uses: runforesight/workflow-telemetry-action@v1
       - name: Run Playwright tests
