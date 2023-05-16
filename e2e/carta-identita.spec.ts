@@ -19,7 +19,7 @@ test('carta identita e chiuso', async ({ page }) => {
 		})
 		.getByRole('button', { name: 'Prenota' })
 		.click();
-	expect(
+	await expect(
 		page.getByText(
 			'Al momento non ci sono date disponibili per il servizio richiesto',
 		),
