@@ -2,11 +2,8 @@ import { test, expect } from '@playwright/test';
 import { setTimeout } from 'timers/promises';
 
 const delay = 10_000;
-const timeout = 60_000;
-test.setTimeout(60_000 * 10);
 
 test('carta identita e chiuso', async ({ page }) => {
-	page.setDefaultTimeout(timeout);
 	await page.goto('https://prenotami.esteri.it/Home?ReturnUrl=%2fServices');
 	await page.getByLabel('Email').click();
 	await page.getByLabel('Email').fill(process.env.CONS_EMAIL!);
