@@ -84,7 +84,6 @@ if (process.env.CI === 'true') {
 	config = {
 		...config,
 		forbidOnly: !!process.env.CI,
-		retries: 1,
 		reporter: 'html',
 		workers: 2,
 	};
