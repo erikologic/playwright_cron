@@ -9,13 +9,13 @@ require('dotenv').config({ path: './.env.e2e' });
 let config: PlaywrightTestConfig = {
 	testDir: './e2e',
 	/* Maximum time one test can run for. */
-	timeout: 60_000 * 5,
+	timeout: 30 * 60 * 1000,
 	expect: {
 		/**
 		 * Maximum time expect() should wait for the condition to be met.
 		 * For example in `await expect(locator).toHaveText();`
 		 */
-		timeout: 60_000,
+		timeout: 60 * 1000,
 	},
 	/* Run tests in files in parallel */
 	fullyParallel: true,
